@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,8 +17,10 @@ namespace Day7_HashTable_And_BinarySearch
             switch (option)
             {
                 case 1:
-                    HashTableOperations findFrequencyOfWord=new HashTableOperations();
-                    findFrequencyOfWord.FrequencyOfWord("To be or not to be");
+                    //HashTableOperations findFrequencyOfWord=new HashTableOperations();
+                    //findFrequencyOfWord.FrequencyOfWord("To be or not to be");
+                    HashTableUsingLinkList.FreqOfWord("To be or not to be ");
+
                     break;
                 default:
                     break;
