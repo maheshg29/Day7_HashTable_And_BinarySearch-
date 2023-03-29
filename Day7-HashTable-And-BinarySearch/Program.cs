@@ -15,7 +15,7 @@ namespace Day7_HashTable_And_BinarySearch
             Console.WriteLine("Welcome to Day 7 HashTable and Binary Search Practice Problem");
             Console.WriteLine("Select one Option for \n 1. Find frequency of words in a sentence" +
                 "\n 2. Find frequency of words in paragraph \n 3. Remove Given Word \n 4. Insert Data in BST" +
-                "\n 5. Create New data Binary Tree");
+                "\n 5. Create New data Binary Tree ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -48,6 +48,8 @@ namespace Day7_HashTable_And_BinarySearch
                     {
                         binarySearchTree1.Insert(dataArray[i]);
                     }
+                    Console.WriteLine("BST in-order traversal:");
+                    BinarySearchTree.InOrderTraversal(binarySearchTree1.root);
                     break;  
 
                 default:

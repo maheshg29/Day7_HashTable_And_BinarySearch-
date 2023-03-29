@@ -60,5 +60,23 @@ namespace Day7_HashTable_And_BinarySearch
                 }
             }
         }
+        public static int count = 0;
+        public static void InOrderTraversal(BSTNode node)
+        {
+            
+            if (node == null)
+            {
+                count++;
+                return;
+            }
+
+            InOrderTraversal(node.left);
+            if (node.value == 63)
+            {
+                Console.WriteLine("63 Present at index no "+count);
+            }
+            Console.Write(node.value + " ");
+            InOrderTraversal(node.right);
+        }
     }  
 }
