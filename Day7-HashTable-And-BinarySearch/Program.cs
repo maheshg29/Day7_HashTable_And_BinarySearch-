@@ -14,7 +14,8 @@ namespace Day7_HashTable_And_BinarySearch
         {
             Console.WriteLine("Welcome to Day 7 HashTable and Binary Search Practice Problem");
             Console.WriteLine("Select one Option for \n 1. Find frequency of words in a sentence" +
-                "\n 2. Find frequency of words in paragraph \n 3. Remove Given Word \n 4. Insert Data in BST");
+                "\n 2. Find frequency of words in paragraph \n 3. Remove Given Word \n 4. Insert Data in BST" +
+                "\n 5. Create New data Binary Tree");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -40,6 +41,14 @@ namespace Day7_HashTable_And_BinarySearch
                     binarySearchTree.Insert(30);
                     binarySearchTree.Insert(70);
                     break;
+                case 5:
+                    BinarySearchTree binarySearchTree1 = new BinarySearchTree();
+                    int[] dataArray = new int[] { 56, 30, 70, 22, 40, 60, 95, 11, 65, 3, 16, 63, 67 };
+                    for (int i = 0; i < dataArray.Length; i++)
+                    {
+                        binarySearchTree1.Insert(dataArray[i]);
+                    }
+                    break;  
 
                 default:
                     Console.WriteLine("Please Enter Valid Option fot operation");
