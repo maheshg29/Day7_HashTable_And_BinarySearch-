@@ -21,7 +21,7 @@ namespace Day7_HashTable_And_BinarySearch
 
     }
 
-    class HashTableUsingLinkList
+    public class HashTableUsingLinkList
     {
         public static LinkedList<MyMapNode<string, int>>[] FreqOfWord(string inputString)
         {
@@ -60,7 +60,7 @@ namespace Day7_HashTable_And_BinarySearch
                         }
                     }
                 }
-        return hashtable;
+                return hashtable;
         }
 
         static int GetArrayIndex(string word,int indexsize)
@@ -70,8 +70,34 @@ namespace Day7_HashTable_And_BinarySearch
                 return Math.Abs(index);
         }
 
-       
+        public static void RemoveWord(string targetWord, LinkedList<MyMapNode<string, int>>[] hashtable)
+        {
+            foreach (LinkedList<MyMapNode<string, int>> removeData in hashtable)
+            {
+                if (removeData != null)
+                {
+                    foreach (MyMapNode<string, int> node in removeData)
+                    {
+                        if (node.Key == targetWord)
+                        {
+                            removeData.Remove(node);
+                            break;
+                        }
+                    }
+                }
+            }
 
+            Console.WriteLine("\n After removing Given Word from phrase");
+            foreach (LinkedList<MyMapNode<string, int>> printdata1 in hashtable)
+            {
+                if (printdata1 != null)
+                {
+                    foreach (MyMapNode<string, int> node in printdata1)
+                    {
+                        Console.WriteLine("{0}: {1}", node.Key, node.Value);
+                    }
+                }
+            }
+        }
     }
-
 }

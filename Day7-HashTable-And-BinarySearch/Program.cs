@@ -13,7 +13,7 @@ namespace Day7_HashTable_And_BinarySearch
         {
             Console.WriteLine("Welcome to Day 7 HashTable and Binary Search Practice Problem");
             Console.WriteLine("Select one Option for \n 1. Find frequency of words in a sentence" +
-                "\n 2. Find frequency of words in paragraph");
+                "\n 2. Find frequency of words in paragraph \n 3. Remove Given Word");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -26,7 +26,13 @@ namespace Day7_HashTable_And_BinarySearch
                 case 2:
                     HashTableUsingLinkList.FreqOfWord("Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations");
                     break;
-               
+
+                case 3:
+                    string inputString = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+                    LinkedList<MyMapNode<string, int>>[] hashtable = HashTableUsingLinkList.FreqOfWord(inputString);
+                    HashTableUsingLinkList.RemoveWord("avoidable", hashtable);
+                    break;
+
                 default:
                     break;
             }
