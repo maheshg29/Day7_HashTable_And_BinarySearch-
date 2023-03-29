@@ -20,12 +20,13 @@ namespace Day7_HashTable_And_BinarySearch
                 case 1:
                     //HashTableOperations findFrequencyOfWord=new HashTableOperations();
                     //findFrequencyOfWord.FrequencyOfWord("To be or not to be");
-                    HashTableUsingLinkList.FreqOfWord("To be or not to be ");
+                    HashTableUsingLinkList.FreqOfWord("To be or not to be");
                     break;
 
                 case 2:
                     HashTableUsingLinkList.FreqOfWord("Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations");
                     break;
+               
                 default:
                     break;
             }

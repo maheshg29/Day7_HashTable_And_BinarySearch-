@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Day7_HashTable_And_BinarySearch
 {
@@ -17,27 +19,11 @@ namespace Day7_HashTable_And_BinarySearch
             Value = value;
         }
 
-        public override bool Equals(object obj)
-        {
-            if (obj == null || GetType() != obj.GetType())
-            {
-                return false;
-            }
-
-            MyMapNode<TKey, TValue> other = (MyMapNode<TKey, TValue>)obj;
-            return Key.Equals(other.Key);
-        }
-
-        public override int GetHashCode()
-        {
-            return Key.GetHashCode();
-        }
-
-
     }
+
     class HashTableUsingLinkList
     {
-        public static void FreqOfWord(string inputString)
+        public static LinkedList<MyMapNode<string, int>>[] FreqOfWord(string inputString)
         {
                 LinkedList<MyMapNode<string, int>>[] hashtable = new LinkedList<MyMapNode<string, int>>[inputString.Length];
                 string[] words = inputString.Split(' ');
@@ -74,6 +60,7 @@ namespace Day7_HashTable_And_BinarySearch
                         }
                     }
                 }
+        return hashtable;
         }
 
         static int GetArrayIndex(string word,int indexsize)
@@ -83,6 +70,8 @@ namespace Day7_HashTable_And_BinarySearch
                 return Math.Abs(index);
         }
 
+       
+
     }
-      
+
 }
